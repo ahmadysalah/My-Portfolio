@@ -5,7 +5,7 @@ body{
 	
 }
 .conten{
-	height:1300px;
+	height:1600px;
 		}
 #warp{
 	background-color:#FFF;
@@ -124,14 +124,26 @@ div.flex{
 }
 .flex-cont > div {
   background-color: #f1f1f1;
-  margin: 10px;
+  margin: 1px;
   text-align: center;
-}
-.imgcon{
-	width:70px;
-	height:60px;
+background-color: #ffffff;width: 390px;overflow: hidden;margin: 5px auto;padding: 2px;}
+
+img{border: 2px solid #fff;
+	width:280px;
+	height:220px;
 	border:1px solid #C1C3D1; 
 	border-radius: 20%;
-   }
+	 }
+	
+	 
+			 
+	 div button:first-of-type{float: left;
+	 height:200;}
+	 div button:last-of-type{float: right;
+		height:200;}
+	 
+	 button{background-color: #fff; color: #000000; border: 2px solid #fff; margin:15 2 2;
+					font-size: 30px; font-weight: bold; width: 50px; cursor: pointer;padding:20px;}
+	 
 	
 	
