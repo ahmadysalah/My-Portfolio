@@ -3,8 +3,53 @@
 <head>
 <link rel="icon" href="img/Title.ico">
 <title>Ahmad Salah Profile</title>
-<link type="text/css" href="css/css.css" rel="stylesheet">
+<link d type="text/css" href="css/css.css" rel="stylesheet">
+<script>
+	var i = 0; // Start point
+	var images = [];
+	var images2 = [];
+	var time = 3000;
 
+	// Image List
+	images[0] = 'img/GitHub-Mark.png';
+	images[1] = 'img/freecodecamp.jpeg';
+	images[2] = 'img/codeware.jpg';
+	///
+	images2[0] = 'img/face.png';
+	images2[1] = 'img/inesta.jpg';
+	images2[2] = 'img/gitter-logo.png';
+   
+  
+	// Change Image
+	function changeImg(){
+		
+		document.slide.src = images[i];
+       
+
+		if(i < images.length - 1){
+			i++;
+		} else {
+			i = 0;
+			}
+		setTimeout("changeImg()", time);
+	}
+	
+		window.onload = changeImg;
+	var i = 0;
+          function mySlide(im)
+          {
+              if(im === 'next')
+              {
+                  i++;
+                  if(i === images2.length){ i = images2.length - 1; }
+              }else{
+                  i--;
+                  if(i < 0){ i = 0; }
+              }
+              
+              document.getElementById('slide2').src = images2[i];
+          }
+</script>
 </head>
 <body>
 <div class="conten">
@@ -144,9 +189,14 @@
 <td class="text-left">
 
   <div class="flex-cont"> 
-   <div><a href="https://github.com/ahmadysalah" target="_blank"><img src="img/GitHub-Mark.png" alt="facebook" class="imgcon"></a> </div>
+   <div>
+
+ <img name="slide" width="300" height="150">
+
+   <!-- <a href="https://github.com/ahmadysalah" target="_blank"><img src="img/GitHub-Mark.png" alt="facebook" class="imgcon"></a> </div>
    <div> <a href="https://www.freecodecamp.org/ahmadsalah" target="_blank"><img src="img/freecodecamp.jpeg" alt="twitter" class="imgcon"></a></div>
-   <div> <a href="https://www.codewars.com/users/ahmadysalah" target="_blank"><img src="img/codeware.jpg" alt="insta" class="imgcon"></a></div>
+   <div> <a href="https://www.codewars.com/users/ahmadysalah" target="_blank"><img src="img/codeware.jpg" alt="insta" class="imgcon"></a>-->
+   </div>
   </div>
      </td></tr>
      
@@ -156,17 +206,21 @@
 <td class="text-left">
 
   <div class="flex-cont"> 
-   <div><a href="https://www.facebook.com/maahde?ref=bookmarks" target="_blank"><img src="img/face.png" alt="facebook" class="imgcon"></a> </div>
    
-   <div> <a href="https://www.instagram.com/a.ahmad.salah/" target="_blank"><img src="img/inesta.jpg" alt="insta" class="imgcon"></a></div>
-   <div><a href="https://gitter.im/ahmadysalah" target="_blank"><img src="img/gitter-logo.png" alt="geter" class="imgcon"></a> </div>
-        </div>
+      <div>
+          <img src="img/face.png" id="slide2" alt="" width="400" height="200">
+          <button onclick="mySlide('prev');"><</button>
+          <button onclick="mySlide('next');">></button>
+      </div>
+
+     </div>
      </td></tr>
-          </table>
+    
+    </table>
+  
 </div>
 
 </div>
-
 </body>
 
 </html>
